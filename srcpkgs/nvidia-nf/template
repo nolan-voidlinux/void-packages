@@ -16,20 +16,8 @@ short_desc="${_desc} - Libraries and Utilities"
 conflicts="nvidia-stable>=0"
 replaces="nvidia-stable>=0"
 
-subpackages="nvidia-nf-gtklibs nvidia-nf-dkms nvidia-nf-firmware nvidia-nf-opencl nvidia-nf-libs nvidia-nf-libs-32bit"
-depends="nvidia${version}
- nvidia-nf-gtklibs-${version}_${revision}
- nvidia-nf-dkms-${version}_${revision}
- nvidia-nf-firmware-${version}_${revision}
- nvidia-nf-libs-${version}_${revision}"
-
-nvidia-nf-gtklibs_package() {
-        short_desc="${_desc} - GTK+ libraries Meta Package"
-        conflicts="nvidia-stable-gtklibs>=0"
-	replaces="nvidia-stable-gtklibs>=0"
-	depends="nvidia${version}-gtklibs"
-	metapackage=yes
-}
+subpackages="nvidia-nf-opencl nvidia-nf-libs-32bit"
+depends="nvidia${version}"
 
 nvidia-nf-libs-32bit_package() {
         short_desc="${_desc} - common libraries (32bit) Meta Package"
@@ -40,33 +28,10 @@ nvidia-nf-libs-32bit_package() {
 	metapackage=yes
 }
 
-nvidia-nf-libs_package() {
-        short_desc="${_desc} - common libraries Meta Package"
-        conflicts="nvidia-stable-libs>=0"
-	replaces="nvidia-stable-libs>=0"
-	depends="nvidia${version}-libs"
-	metapackage=yes
-}
-
-nvidia-nf-dkms_package() {
-        short_desc="${_desc} - DKMS kernel module Meta Package"
-        conflicts="nvidia-stable-dkms>=0"
-	replaces="nvidia-stable-dkms>=0"
-	depends="nvidia${version}-dkms"
-        license="MIT AND GPL-2.0-only"
-	metapackage=yes
-}
-
 nvidia-nf-opencl_package() {
         short_desc="${_desc} - OpenCL implementation Meta Package"
         conflicts="nvidia-stable-opencl>=0"
 	replaces="nvidia-stable-opencl>=0"
 	depends="nvidia${version}-opencl"
-	metapackage=yes
-}
-
-nvidia-nf-firmware_package() {
-        short_desc="${_desc} - Firmware Meta Package"
-	depends="nvidia${version}-firmware"
 	metapackage=yes
 }
