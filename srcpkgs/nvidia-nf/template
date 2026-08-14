@@ -3,8 +3,8 @@
 _desc="NVIDIA new feature drivers for linux Meta Package"
 
 pkgname=nvidia-nf
-MAJOR=595
-MINOR=91.07
+MAJOR=610
+MINOR=57.04
 version=${MAJOR}.${MINOR}
 revision=1
 metapackage=yes
