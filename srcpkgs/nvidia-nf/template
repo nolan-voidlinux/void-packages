@@ -20,9 +20,9 @@ replaces="nvidia-stable>=0"
 
 subpackages="nvidia-nf-gtklibs nvidia-nf-dkms nvidia-nf-firmware nvidia-nf-opencl nvidia-nf-libs nvidia-nf-libs-32bit"
 depends="nvidia${MAJOR}
- nvidia-nf-gtklibs
- nvidia-nf-dkms
- nvidia-nf-firmare"
+ nvidia-nf-gtklibs-${version}_${revision}
+ nvidia-nf-dkms-${version}_${revision}
+ nvidia-nf-firmare-${version}_${revision}"
 
 nvidia-nf-gtklibs_package() {
         short_desc="${_desc} - GTK+ libraries Meta Package"
