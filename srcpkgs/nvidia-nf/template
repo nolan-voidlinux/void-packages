@@ -3,9 +3,7 @@
 _desc="NVIDIA new feature drivers for linux Meta Package"
 
 pkgname=nvidia-nf
-MAJOR=610
-MINOR=57.04
-version=${MAJOR}.${MINOR}
+version=610
 revision=1
 metapackage=yes
 maintainer="Nolan MacPhee <nolan.voidlinux@gmail.com>"
@@ -19,7 +17,7 @@ conflicts="nvidia-stable>=0"
 replaces="nvidia-stable>=0"
 
 subpackages="nvidia-nf-gtklibs nvidia-nf-dkms nvidia-nf-firmware nvidia-nf-opencl nvidia-nf-libs nvidia-nf-libs-32bit"
-depends="nvidia${MAJOR}
+depends="nvidia${version}
  nvidia-nf-gtklibs-${version}_${revision}
  nvidia-nf-dkms-${version}_${revision}
  nvidia-nf-firmware-${version}_${revision}"
